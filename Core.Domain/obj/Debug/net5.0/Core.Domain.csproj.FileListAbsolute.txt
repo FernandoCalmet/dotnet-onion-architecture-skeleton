@@ -1,0 +1,12 @@
+D:\Github\FernandoCalmet\CS-ASPNET-Core-Onion-Architecture-CQRS\Core.Domain\bin\Debug\net5.0\Core.Domain.deps.json
+D:\Github\FernandoCalmet\CS-ASPNET-Core-Onion-Architecture-CQRS\Core.Domain\bin\Debug\net5.0\Core.Domain.dll
+D:\Github\FernandoCalmet\CS-ASPNET-Core-Onion-Architecture-CQRS\Core.Domain\bin\Debug\net5.0\ref\Core.Domain.dll
+D:\Github\FernandoCalmet\CS-ASPNET-Core-Onion-Architecture-CQRS\Core.Domain\bin\Debug\net5.0\Core.Domain.pdb
+D:\Github\FernandoCalmet\CS-ASPNET-Core-Onion-Architecture-CQRS\Core.Domain\obj\Debug\net5.0\Core.Domain.csproj.AssemblyReference.cache
+D:\Github\FernandoCalmet\CS-ASPNET-Core-Onion-Architecture-CQRS\Core.Domain\obj\Debug\net5.0\Core.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\FernandoCalmet\CS-ASPNET-Core-Onion-Architecture-CQRS\Core.Domain\obj\Debug\net5.0\Core.Domain.AssemblyInfoInputs.cache
+D:\Github\FernandoCalmet\CS-ASPNET-Core-Onion-Architecture-CQRS\Core.Domain\obj\Debug\net5.0\Core.Domain.AssemblyInfo.cs
+D:\Github\FernandoCalmet\CS-ASPNET-Core-Onion-Architecture-CQRS\Core.Domain\obj\Debug\net5.0\Core.Domain.csproj.CoreCompileInputs.cache
+D:\Github\FernandoCalmet\CS-ASPNET-Core-Onion-Architecture-CQRS\Core.Domain\obj\Debug\net5.0\Core.Domain.dll
+D:\Github\FernandoCalmet\CS-ASPNET-Core-Onion-Architecture-CQRS\Core.Domain\obj\Debug\net5.0\ref\Core.Domain.dll
+D:\Github\FernandoCalmet\CS-ASPNET-Core-Onion-Architecture-CQRS\Core.Domain\obj\Debug\net5.0\Core.Domain.pdb
