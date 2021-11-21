@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4jSwiYo0IbkxFo0gQvR6iJDjyKLAGzqEvMj5ABm0neJuJuLRBhsigHjuoVqDrmZQ7Owk3+0JD3ouqT55c42uIA==",
+  "dgSpecHash": "g97AIgE8rsaS1FohIa65CK5PWhPSY5ZbYZPr5t7rAuPuBK1SZ8+p2hfCBN5DRzqB6sfXtG0Z4KiepGBUUpA/mw==",
   "success": true,
   "projectFilePath": "D:\\Github\\FernandoCalmet\\CS-ASPNET-Core-Onion-Architecture-CQRS\\Presentations.Backends.Api\\Presentations.Backends.Api.csproj",
   "expectedPackageFiles": [

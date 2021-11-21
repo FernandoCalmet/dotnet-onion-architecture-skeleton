@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ecqCbb88ILM0SlbFMp46GyPsdFmJIZBlLpgQ4979A7lNL1oIwEFSHQwXkzhVwWw8C4avPER37dpYn9nr5BjWvg==",
+  "dgSpecHash": "r8ROoP6vyG7BjjFzgzZ2saycbUdkNK5loxexMiaE5yNjMb+kcYQeFKungL6HUoijIaYukyTSdjqV+VlG/AX31A==",
   "success": true,
   "projectFilePath": "D:\\Github\\FernandoCalmet\\CS-ASPNET-Core-Onion-Architecture-CQRS\\Infrastructure.Identity\\Infrastructure.Identity.csproj",
   "expectedPackageFiles": [],
