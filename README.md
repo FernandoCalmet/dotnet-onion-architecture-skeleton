@@ -22,7 +22,7 @@ Este proyecto es una muestra de un esqueleto de aplicación con arquitectura de 
 Clonar el repositorio.
 
 ```bash
-gh repo clone FernandoCalmet/CS-ASPNET-Core-Onion-Architecture-CQRS
+gh repo clone FernandoCalmet/DOTNET-5-ASPNET-Core-Onion-Architecture-CQRS
 ```
 
 Ejecutar aplicación.
