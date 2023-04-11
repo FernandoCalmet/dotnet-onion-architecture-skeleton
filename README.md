@@ -5,7 +5,7 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Khanakat][khanakat-shield]][khanakat-url]
 
-## TABLA DE CONTENIDO
+## CONTENT
 
 * 🔥 [Description](#description)
 * ⚙️ [Install](#install)
@@ -76,7 +76,14 @@ Solution/
 └── ...
 ```
 
-In this example, the Core project contains the domain entities and business logic, the Application project contains the use cases and services, the Infrastructure project contains the data access layer, and the Presentation project contains the user interface components. Note that this is just one example of how to implement Onion Architecture in .NET, and you may need to adapt it to your specific needs and preferences.
+In this example, the Core project contains the domain entities and business logic, the Application project contains the use cases and services, the Infrastructure project contains the data access layer, and the Presentation project contains the user interface components. The references between the projects are as follows:
+
+- The Core project has no dependencies.
+- The Application project depends on the Core project.
+- The Infrastructure project depends on the Core project and any third-party libraries necessary for data access.
+- The Presentation project depends on the Application and Core projects.
+
+`Note that this is just one example of how to implement Onion Architecture in .NET, and you may need to adapt it to your specific needs and preferences`.
 
 ### Conclusion
 In conclusion, Onion Architecture is an excellent software design pattern that can help you build robust and maintainable applications. By separating the application into different layers, it promotes decoupling and testability. We hope that this article has given you a good understanding of Onion Architecture and its implementation in Dotnet. Next time you start a new project, give Onion Architecture a try, and see the difference yourself!
