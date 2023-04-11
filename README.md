@@ -1,4 +1,4 @@
-# 🦄 C# ASP.NET CORE 5 ONION ARCHITECTURE CQRS
+# 🦄 DOTNET TEMPLATE SKELETON BASED ON ONION ARCHITECTURE
 
 [![Github][github-shield]][github-url]
 [![Kofi][kofi-shield]][kofi-url]
@@ -7,91 +7,85 @@
 
 ## TABLA DE CONTENIDO
 
-* [Acerca del proyecto](#acerca-del-proyecto)
-* [Instalación](#instalación)
-* [Resumen teórico](#resumen-teórico)
-* [Dependencias](#dependencias)
-* [Licencia](#licencia)
+* 🔥 [Description](#description)
+* ⚙️ [Install](#install)
+* 📓 [Summary](#summary)
+* 📄 [License](#license)
+* ⭐️ [Give me a star](#give-me-a-star)
 
-## 🔥 ACERCA DEL PROYECTO
+## DESCRIPTION
 
-Este proyecto es una muestra de un esqueleto de aplicación con arquitectura de cebolla y patrón CQRS. Se utilizo ``ASP.NET Core 5`` con C#.
+This project is a DOTNET template skeleton based on onion architecture.
 
-## ⚙️ INSTALACIÓN
+## INSTALL
 
-Clonar el repositorio.
-
-```bash
-gh repo clone FernandoCalmet/dotnet-5-aspnet-core-onion-architecture-cqrs
-```
-
-Ejecutar aplicación.
+Clone this repository
 
 ```bash
-dotnet run
+gh repo clone FernandoCalmet/dotnet-onion-architecture-skeleton
 ```
 
-## 📓 RESUMEN TEÓRICO
+## SUMMARY
 
-### La Necesidad De Seguir Una Arquitectura
+### Simplifying Software Development
+As a software developer, you're probably aware that designing a robust, scalable, and maintainable software architecture is not an easy task. That's where Onion Architecture comes in as an approach to software development that helps overcome these challenges. In this article, we'll dive deeper into Onion Architecture, its benefits, and how to implement it in Dotnet.
 
-Para mantener la cordura estructural en soluciones medianas a grandes, siempre se recomienda seguir algún tipo de arquitectura. Debe haber visto que la mayoría de los proyectos de código abierto tienen múltiples capas de proyectos dentro de una estructura de carpetas compleja.
+### Understanding Onion Architecture
+Onion Architecture is a software design pattern developed by Jeffrey Palermo. It is adopted from Uncle Bob's Clean Architecture, and the idea behind the concept is to make software independent of frameworks, databases, UI, and other external dependencies. Simply put, it helps to decouple the application into different layers, with each layer representing a specific concern or responsibility. The Onion Architecture comprises four layers: 
 
-### Capa Vs Niveles
+### Domain Layer
+The Domain layer is the heart of the Onion Architecture. It defines the core business logic of the application and contains entities, value objects, business rules, and interfaces that define contracts with other layers.
 
-Cuando solo hay una separación lógica en su aplicación, podemos denominarla capas o N capas. En los casos en los que existe una separación física y lógica de preocupaciones, a menudo se la denomina aplicación de n niveles, donde n es el número de separaciones. 3 es el valor más común de N. En este proyecto se implementara la Arquitectura en capas.
+### Application Layer
+The Application layer works as an interface between the Presentation and the Domain layer. It contains application services, which orchestrate the application flow and maps the data between the Domain and Presentation layer.
 
-Esta estratificación puede ayudar en la separación de preocupaciones, subdividiendo la solución en unidades más pequeñas para que cada unidad sea responsable de una tarea específica y también para aprovechar la abstracción. Para proyectos de escala media a grande donde trabajan varios equipos, las capas tienen ventajas muy obvias bajo la manga. Permite que un equipo o individuo específico trabaje en una capa en particular sin perturbar la integridad de los demás. Hace que sea mucho más fácil realizar un seguimiento de los cambios mediante el control de fuente.
+### Infrastructure Layer
+The Infrastructure layer contains all the technical details of the application, like data storage, logging, messaging, and so on. It also implements the interfaces defined in the Domain layer.
 
-Además, hace que toda su solución se vea limpia.
+### Presentation Layer
+The Presentation layer is responsible for presenting the application output to the users, like web pages, APIs, and user interfaces. It communicates with the Application layer to get the information from the Domain layer.
 
-### Breve Descripción General De La Arquitectura De N-Layer
+### Benefits of Onion Architecture in Dotnet
+Onion Architecture provides several benefits, like testability, maintainability, and flexibility. With Onion Architecture, you can write unit tests that only depend on the Domain layer and are not affected by any framework or external dependencies. It makes it easier to switch the UI or the database layer without affecting the core business logic. Moreover, the architecture follows the Single Responsibility Principle, making the code easier to maintain and refactor.
 
-Una de las arquitecturas más populares en aplicaciones ASP.NET Core. Aquí hay una representación esquemática simple de una variación de la Arquitectura de N capas. La capa de presentación normalmente contiene la parte con la que el usuario puede interactuar, es decir, WebApi, MVC, formularios web, etc. La lógica empresarial es probablemente la parte más importante de toda esta configuración. Contiene todas las lógicas relacionadas con el requisito empresarial. Ahora, idealmente, cada aplicación tiene su propia base de datos dedicada. Para acceder a la base de datos, introducimos una capa de acceso a datos. Esta capa generalmente contiene ORM para que ASP.NET obtenga/escriba en la base de datos.
+### Structure
 
-![Layered](.img/layered.png)
+Here's an example of how the directory structure might look:
 
-### Desventajas De La Arquitectura De N Capas
+```
+Solution/
+├── Core/
+│   ├── Entities/
+│   ├── Interfaces/
+│   ├── Services/
+│   └── ...
+├── Application/
+│   ├── UseCases/
+│   ├── Services/
+│   ├── Interfaces/
+│   └── ...
+├── Infrastructure/
+│   ├── Repositories/
+│   ├── Data/
+│   └── ...
+├── Presentation/
+│   ├── Controllers/
+│   ├── Views/
+│   ├── Models/
+│   └── ...
+└── ...
+```
 
-Para comprender claramente las ventajas de la arquitectura Onion en las aplicaciones ASP.NET Core, necesitaremos estudiar los problemas con la arquitectura N Layer. Es una de las arquitecturas de soluciones más utilizadas entre los desarrolladores de .NET.
+In this example, the Core project contains the domain entities and business logic, the Application project contains the use cases and services, the Infrastructure project contains the data access layer, and the Presentation project contains the user interface components. Note that this is just one example of how to implement Onion Architecture in .NET, and you may need to adapt it to your specific needs and preferences.
 
-En lugar de construir una estructura altamente desacoplada, a menudo terminamos con varias capas que dependen unas de otras. Esto es algo realmente malo en la creación de aplicaciones escalables y puede plantear problemas con el crecimiento de la base de código. Para dejarlo claro, en el diagrama anterior podemos ver que la capa de presentación depende de la capa de lógica, que a su vez depende del acceso a los datos y así sucesivamente.
+### Conclusion
+In conclusion, Onion Architecture is an excellent software design pattern that can help you build robust and maintainable applications. By separating the application into different layers, it promotes decoupling and testability. We hope that this article has given you a good understanding of Onion Architecture and its implementation in Dotnet. Next time you start a new project, give Onion Architecture a try, and see the difference yourself!
 
-Por lo tanto, estaríamos creando un montón de acoplamientos innecesarios. ¿Es realmente necesario? En la mayoría de los casos, la capa de interfaz de usuario (presentación) también se acoplaría a las capas de acceso a datos. Esto frustraría el propósito de tener una arquitectura limpia.
+## LICENSE
+This project is licensed under the License (MIT License) - see the [LICENSE](LICENSE) file for details.
 
-En la Arquitectura de N capas, la base de datos suele ser el núcleo de toda la aplicación, es decir, es la única capa que no tiene que depender de nada más. Cualquier pequeño cambio en la capa de lógica empresarial o en la capa de acceso a datos puede resultar peligroso para la integridad de toda la aplicación.
-
-### Introducción A La Arquitectura Onion
-
-La arquitectura Onion, presentada por Jeffrey Palermo, supera los problemas de la arquitectura en capas con gran facilidad. Con Onion Architecture, el cambio de juego es que la capa de dominio (entidades y reglas de validación que son comunes al caso comercial) está en el núcleo de toda la aplicación. Esto significa mayor flexibilidad y menor acoplamiento. En este enfoque, podemos ver que todas las capas dependen solo de las capas principales.
-
-![Layered](.img/onion.png)
-
-Así es como desglosaría la estructura de la Solución propuesta.
-
-**La capa de dominio y aplicación** estará en el centro del diseño. Podemos referirnos a estas capas en Core Layers. Estas capas no dependerán de ninguna otra capa.
-
-La capa de dominio generalmente contiene entidades y lógica empresarial. La capa de aplicación tendría interfaces y tipos. La principal diferencia es que la capa de dominio tendrá los tipos que son comunes a toda la empresa, por lo que también se puede compartir con otras soluciones. Pero la capa de aplicación tiene tipos e interfaces específicos de la aplicación. ¿Comprender?
-
-Como se mencionó anteriormente, las capas principales nunca dependerán de ninguna otra capa. Por lo tanto, lo que hacemos es crear interfaces en la capa de aplicación y estas interfaces se implementan en las capas externas. Esto también se conoce como Principio de Inversión de Dependencia o DIP.
-
-Por ejemplo, si su aplicación quiere enviar un correo, definimos un IMailService en la capa de aplicación y lo implementamos fuera de las capas principales. Con DIP, es posible cambiar fácilmente las implementaciones. Esto ayuda a crear aplicaciones escalables.
-
-**La capa de presentación** es donde idealmente desearía colocar el proyecto al que el usuario puede acceder. Puede ser un proyecto WebApi, Mvc, etc.
-
-**La capa de infraestructura** es un poco más complicada. Es donde le gustaría agregar su infraestructura. La infraestructura puede ser cualquier cosa. Tal vez una capa principal de Entity Framework para acceder a la base de datos, o una capa creada específicamente para generar tokens JWT para la autenticación o incluso una capa Hangfire. Comprenderá más cuando comencemos a implementar la arquitectura Onion en ASP.NET Core WebApi Project.
-
-## 📥 DEPENDENCIAS
-
-- [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) : Herramientas Swagger para documentar API creadas en ASP.NET Core.
-
-## 📄 LICENCIA
-
-Este proyecto está bajo la Licencia (Licencia MIT) - mire el archivo [LICENSE](LICENSE) para más detalles.
-
-## ⭐️ DAME UNA ESTRELLA
-
-Si esta Implementación le resultó útil o la utilizó en sus Proyectos, déle una estrella. ¡Gracias! O, si te sientes realmente generoso, [¡Apoye el proyecto con una pequeña contribución!](https://ko-fi.com/fernandocalmet).
+## GIVE ME A STAR
+If you found this Implementation useful or used it in your Projects, please give it a star. Thank you! Or, if you're feeling really generous, [Support the project with a small contribution!](https://ko-fi.com/fernandocalmet).
 
 <!--- reference style links --->
 [github-shield]: https://img.shields.io/badge/-@fernandocalmet-%23181717?style=flat-square&logo=github
