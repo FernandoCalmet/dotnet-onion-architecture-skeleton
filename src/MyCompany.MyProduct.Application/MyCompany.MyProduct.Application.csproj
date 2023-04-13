@@ -7,8 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
+    <Folder Include="Abstractions\Authentication\" />
+    <Folder Include="Abstractions\Common\" />
+    <Folder Include="Abstractions\Emails\" />
+    <Folder Include="Abstractions\Messaging\" />
+    <Folder Include="Abstractions\Data\" />
+    <Folder Include="Abstractions\Notifications\" />
+    <Folder Include="Behaviours\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Extensions\" />
     <Folder Include="UsesCases\" />
   </ItemGroup>
 

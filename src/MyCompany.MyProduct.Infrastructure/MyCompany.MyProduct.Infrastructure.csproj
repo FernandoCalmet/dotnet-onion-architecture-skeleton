@@ -7,8 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="Repositories\" />
+    <Folder Include="Common\" />
+    <Folder Include="Emails\" />
+    <Folder Include="Messaging\" />
+    <Folder Include="Notifications\" />
+    <Folder Include="Persistence\Migrations\" />
+    <Folder Include="Persistence\Configurations\" />
+    <Folder Include="Persistence\Extensions\" />
+    <Folder Include="Persistence\Repositories\" />
+    <Folder Include="Authorization\" />
+    <Folder Include="BackgroundJobs\" />
   </ItemGroup>
 
   <ItemGroup>

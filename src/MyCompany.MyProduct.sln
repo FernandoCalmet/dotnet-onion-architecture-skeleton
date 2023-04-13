@@ -5,13 +5,28 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5A411BE5-0807-43EE-85DE-C701827F05E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompany.MyProduct.Core", "MyCompany.MyProduct.Core\MyCompany.MyProduct.Core.csproj", "{39B4F9E6-62DE-40E3-A528-010B0485BD6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCompany.MyProduct.Core", "MyCompany.MyProduct.Core\MyCompany.MyProduct.Core.csproj", "{39B4F9E6-62DE-40E3-A528-010B0485BD6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompany.MyProduct.Application", "MyCompany.MyProduct.Application\MyCompany.MyProduct.Application.csproj", "{ECB0BEA6-618C-4274-89D3-A1A4907162DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCompany.MyProduct.Application", "MyCompany.MyProduct.Application\MyCompany.MyProduct.Application.csproj", "{ECB0BEA6-618C-4274-89D3-A1A4907162DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompany.MyProduct.Infrastructure", "MyCompany.MyProduct.Infrastructure\MyCompany.MyProduct.Infrastructure.csproj", "{FE97A55B-ADF6-47A8-97DE-152F0A4576E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCompany.MyProduct.Infrastructure", "MyCompany.MyProduct.Infrastructure\MyCompany.MyProduct.Infrastructure.csproj", "{FE97A55B-ADF6-47A8-97DE-152F0A4576E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompany.MyProduct.Presentation", "MyCompany.MyProduct.Presentation\MyCompany.MyProduct.Presentation.csproj", "{5BAD71EE-B67D-4FAA-BAA4-52520ECB8846}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCompany.MyProduct.Presentation", "MyCompany.MyProduct.Presentation\MyCompany.MyProduct.Presentation.csproj", "{5BAD71EE-B67D-4FAA-BAA4-52520ECB8846}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{BA5A0443-8E80-4BF5-8B97-4E3508865D27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompany.MyProduct.Core.UnitTests", "..\tests\MyCompany.MyProduct.Core.UnitTests\MyCompany.MyProduct.Core.UnitTests.csproj", "{7D48B563-000C-48EB-87A7-CB002211CF75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompany.MyProduct.Infrastructure.UnitTests", "..\tests\MyCompany.MyProduct.Infrastructure.UnitTests\MyCompany.MyProduct.Infrastructure.UnitTests.csproj", "{7298CF92-4FD1-4819-BE8E-2319CC3AE026}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompany.MyProduct.Application.UnitTests", "..\tests\MyCompany.MyProduct.Application.UnitTests\MyCompany.MyProduct.Application.UnitTests.csproj", "{68B505EB-34EE-46B8-8E93-0D61E52A94EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompany.MyProduct.Presentation.UnitTests", "..\tests\MyCompany.MyProduct.Presentation.UnitTests\MyCompany.MyProduct.Presentation.UnitTests.csproj", "{0FB5AC87-006C-4D51-B1BC-3D6CB4470748}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BC2D97B6-DEAA-469B-BFAA-F8F112018D04}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +50,22 @@ Global
 		{5BAD71EE-B67D-4FAA-BAA4-52520ECB8846}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BAD71EE-B67D-4FAA-BAA4-52520ECB8846}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BAD71EE-B67D-4FAA-BAA4-52520ECB8846}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D48B563-000C-48EB-87A7-CB002211CF75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D48B563-000C-48EB-87A7-CB002211CF75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D48B563-000C-48EB-87A7-CB002211CF75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D48B563-000C-48EB-87A7-CB002211CF75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7298CF92-4FD1-4819-BE8E-2319CC3AE026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7298CF92-4FD1-4819-BE8E-2319CC3AE026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7298CF92-4FD1-4819-BE8E-2319CC3AE026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7298CF92-4FD1-4819-BE8E-2319CC3AE026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68B505EB-34EE-46B8-8E93-0D61E52A94EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68B505EB-34EE-46B8-8E93-0D61E52A94EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68B505EB-34EE-46B8-8E93-0D61E52A94EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B505EB-34EE-46B8-8E93-0D61E52A94EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FB5AC87-006C-4D51-B1BC-3D6CB4470748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FB5AC87-006C-4D51-B1BC-3D6CB4470748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FB5AC87-006C-4D51-B1BC-3D6CB4470748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FB5AC87-006C-4D51-B1BC-3D6CB4470748}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +75,10 @@ Global
 		{ECB0BEA6-618C-4274-89D3-A1A4907162DF} = {5A411BE5-0807-43EE-85DE-C701827F05E6}
 		{FE97A55B-ADF6-47A8-97DE-152F0A4576E5} = {5A411BE5-0807-43EE-85DE-C701827F05E6}
 		{5BAD71EE-B67D-4FAA-BAA4-52520ECB8846} = {5A411BE5-0807-43EE-85DE-C701827F05E6}
+		{7D48B563-000C-48EB-87A7-CB002211CF75} = {BA5A0443-8E80-4BF5-8B97-4E3508865D27}
+		{7298CF92-4FD1-4819-BE8E-2319CC3AE026} = {BA5A0443-8E80-4BF5-8B97-4E3508865D27}
+		{68B505EB-34EE-46B8-8E93-0D61E52A94EC} = {BA5A0443-8E80-4BF5-8B97-4E3508865D27}
+		{0FB5AC87-006C-4D51-B1BC-3D6CB4470748} = {BA5A0443-8E80-4BF5-8B97-4E3508865D27}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C45AE4D8-F488-4118-AB42-4C737BFA71A9}

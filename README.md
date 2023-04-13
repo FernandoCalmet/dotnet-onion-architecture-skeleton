@@ -50,30 +50,63 @@ Onion Architecture provides several benefits, like testability, maintainability,
 
 ### Structure
 
-Here's an example of how the directory structure might look:
+Here's my design of how the directory structure might look:
 
 ```
-Solution/
-├── Core/
-│   ├── Entities/
-│   ├── Interfaces/
-│   ├── Services/
-│   └── ...
-├── Application/
-│   ├── UseCases/
-│   ├── Services/
-│   ├── Interfaces/
-│   └── ...
-├── Infrastructure/
-│   ├── Repositories/
-│   ├── Data/
-│   └── ...
-├── Presentation/
-│   ├── Controllers/
-│   ├── Views/
-│   ├── Models/
-│   └── ...
-└── ...
+MyCompany.MyProduct.sln
+│
+├───src
+│   ├───MyCompany.MyProduct.Core
+│   │   ├───Domain
+│   │   │   ├───Entities
+│   │   │   ├───Enums
+│   │   │   ├───Events
+│   │   │   └───ValueObjects
+│   │   ├───Errors
+│   │   ├───Exceptions
+│   │   ├───Primitives
+│   │   ├───Repositories
+│   │   ├───Services
+│   │   ├───Shared
+│   │   └───Specifications
+│   │
+│   ├───MyCompany.MyProduct.Infrastructure
+│   │   ├───Authorization
+│   │   ├───BackgroundJobs
+│   │   ├───Common
+│   │   ├───Emails
+│   │   ├───Messaging
+│   │   ├───Notifications
+│   │   └───Persistence
+│   │       ├───Configurations
+│   │       ├───Extensions
+│   │       ├───Migrations
+│   │       └───Repositories
+│   │
+│   ├───MyCompany.MyProduct.Application
+│   │   ├───Abstractions
+|   |   |   ├───Authentication
+│   │   │   ├───Common
+│   │   │   ├───Data
+│   │   │   ├───Emails
+│   │   │   ├───Messaging
+│   │   │   └───Notifications
+│   │   ├───Behaviours
+│   │   ├───Exceptions
+│   │   ├───Extensions
+│   │   └───UsesCases
+│   │
+│   └───MyCompany.MyProduct.Presentation
+│       ├───Abstractions
+│       ├───Contracts
+│       ├───Controllers
+│       └───Middlewares
+│
+└───tests
+    ├───MyCompany.MyProduct.Core.UnitTests
+    ├───MyCompany.MyProduct.Infrastructure.UnitTests
+    ├───MMyCompany.MyProduct.Application.UnitTests
+    └───MyCompany.MyProduct.Presentation.UnitTests
 ```
 
 In this example, the Core project contains the domain entities and business logic, the Application project contains the use cases and services, the Infrastructure project contains the data access layer, and the Presentation project contains the user interface components. The references between the projects are as follows:

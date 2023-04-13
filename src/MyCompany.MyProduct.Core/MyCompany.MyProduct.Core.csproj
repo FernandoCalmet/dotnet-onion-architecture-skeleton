@@ -7,9 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Interfaces\" />
+    <Folder Include="Domain\Entities\" />
+    <Folder Include="Domain\Enums\" />
+    <Folder Include="Domain\Events\" />
+    <Folder Include="Domain\ValueObjects\" />
+    <Folder Include="Repositories\" />
     <Folder Include="Services\" />
+    <Folder Include="Errors\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Primitives\" />
+    <Folder Include="Shared\" />
+    <Folder Include="Specifications\" />
   </ItemGroup>
 
 </Project>
