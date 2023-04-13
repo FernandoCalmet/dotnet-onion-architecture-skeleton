@@ -15,7 +15,8 @@
 
 ## DESCRIPTION
 
-This project is a DOTNET template skeleton based on onion architecture.
+This project is a DOTNET template skeleton based on onion architecture.  
+👓[Read more about this project](https://github.com/FernandoCalmet/dotnet-onion-architecture-skeleton/wiki)
 
 ## INSTALL
 
@@ -49,7 +50,6 @@ The Presentation layer is responsible for presenting the application output to t
 Onion Architecture provides several benefits, like testability, maintainability, and flexibility. With Onion Architecture, you can write unit tests that only depend on the Domain layer and are not affected by any framework or external dependencies. It makes it easier to switch the UI or the database layer without affecting the core business logic. Moreover, the architecture follows the Single Responsibility Principle, making the code easier to maintain and refactor.
 
 ### Structure
-
 Here's my design of how the directory structure might look:
 
 ```
