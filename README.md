@@ -15,8 +15,7 @@
 
 ## DESCRIPTION
 
-This project is a DOTNET template skeleton based on onion architecture.  
-👓[Read more about this project](https://github.com/FernandoCalmet/dotnet-onion-architecture-skeleton/wiki)
+This project is a DOTNET template skeleton based on onion architecture.
 
 ## INSTALL
 
