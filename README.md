@@ -70,14 +70,16 @@ MyCompany.MyProduct.sln
 │   │   └───Specifications
 │   │
 │   ├───MyCompany.MyProduct.Infrastructure
-│   │   ├───Authorization
+│   │   ├───Authentication
 │   │   ├───BackgroundJobs
 │   │   ├───Common
 │   │   ├───Emails
+│   │   ├───Identity
 │   │   ├───Messaging
 │   │   ├───Notifications
 │   │   └───Persistence
 │   │       ├───Configurations
+│   │       ├───Constants
 │   │       ├───Extensions
 │   │       ├───Migrations
 │   │       └───Repositories
@@ -90,7 +92,7 @@ MyCompany.MyProduct.sln
 │   │   │   ├───Emails
 │   │   │   ├───Messaging
 │   │   │   └───Notifications
-│   │   ├───Behaviours
+│   │   ├───Behaviors
 │   │   ├───Exceptions
 │   │   ├───Extensions
 │   │   └───UsesCases

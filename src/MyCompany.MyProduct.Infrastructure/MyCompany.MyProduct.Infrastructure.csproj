@@ -10,12 +10,14 @@
     <Folder Include="Common\" />
     <Folder Include="Emails\" />
     <Folder Include="Messaging\" />
+    <Folder Include="Identity\" />
     <Folder Include="Notifications\" />
     <Folder Include="Persistence\Migrations\" />
     <Folder Include="Persistence\Configurations\" />
     <Folder Include="Persistence\Extensions\" />
+    <Folder Include="Persistence\Constants\" />
     <Folder Include="Persistence\Repositories\" />
-    <Folder Include="Authorization\" />
+    <Folder Include="Authentication\" />
     <Folder Include="BackgroundJobs\" />
   </ItemGroup>
 
