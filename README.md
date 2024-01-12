@@ -118,7 +118,7 @@ MyCompany.MyProduct.sln
 │       │   └───Domain
 │       └───MyCompany.MyProduct.Domain.UnitTests
 │           ├───Data
-│           └───Features
+│           └───Entities
 └───docker-compose
 ```
 
