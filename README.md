@@ -10,16 +10,17 @@
 * 🔥 [Description](#description)
 * ⚙️ [Install](#install)
 * 📓 [Summary](#summary)
+* 🏗️ [Project Structure](#project-structure)
 * 📄 [License](#license)
 * ⭐️ [Give me a star](#give-me-a-star)
 
 ## DESCRIPTION
 
-This project is a DOTNET template skeleton based on onion architecture.
+This project is a .NET template skeleton built on the Onion Architecture, providing a solid foundation for scalable, maintainable, and robust application development.
 
 ## INSTALL
 
-Clone this repository
+Clone this repository using:
 
 ```bash
 gh repo clone FernandoCalmet/dotnet-onion-architecture-skeleton
@@ -28,99 +29,103 @@ gh repo clone FernandoCalmet/dotnet-onion-architecture-skeleton
 ## SUMMARY
 
 ### Simplifying Software Development
-As a software developer, you're probably aware that designing a robust, scalable, and maintainable software architecture is not an easy task. That's where Onion Architecture comes in as an approach to software development that helps overcome these challenges. In this article, we'll dive deeper into Onion Architecture, its benefits, and how to implement it in Dotnet.
+Developing a robust, scalable, and maintainable software architecture is a complex task. The Onion Architecture, a design pattern developed by Jeffrey Palermo and inspired by Uncle Bob's Clean Architecture, addresses these challenges. This architecture aims to make software independent of external dependencies like frameworks, databases, and UI, promoting decoupling and testability.
 
 ### Understanding Onion Architecture
-Onion Architecture is a software design pattern developed by Jeffrey Palermo. It is adopted from Uncle Bob's Clean Architecture, and the idea behind the concept is to make software independent of frameworks, databases, UI, and other external dependencies. Simply put, it helps to decouple the application into different layers, with each layer representing a specific concern or responsibility. The Onion Architecture comprises four layers: 
+The Onion Architecture is structured in four key layers:
 
 ### Domain Layer
-The Domain layer is the heart of the Onion Architecture. It defines the core business logic of the application and contains entities, value objects, business rules, and interfaces that define contracts with other layers.
+The core of the architecture, containing business logic, entities, value objects, business rules, and interfaces for contracts with other layers.
 
 ### Application Layer
-The Application layer works as an interface between the Presentation and the Domain layer. It contains application services, which orchestrate the application flow and maps the data between the Domain and Presentation layer.
+Serves as an interface between the Presentation and Domain layers, containing services that orchestrate application flow and data mapping.
 
 ### Infrastructure Layer
-The Infrastructure layer contains all the technical details of the application, like data storage, logging, messaging, and so on. It also implements the interfaces defined in the Domain layer.
+Houses technical details like data storage, logging, messaging, etc., and implements interfaces from the Domain layer.
 
 ### Presentation Layer
-The Presentation layer is responsible for presenting the application output to the users, like web pages, APIs, and user interfaces. It communicates with the Application layer to get the information from the Domain layer.
+Responsible for presenting output to users and communicating with the Application layer to access Domain layer information.
 
 ### Benefits of Onion Architecture in Dotnet
-Onion Architecture provides several benefits, like testability, maintainability, and flexibility. With Onion Architecture, you can write unit tests that only depend on the Domain layer and are not affected by any framework or external dependencies. It makes it easier to switch the UI or the database layer without affecting the core business logic. Moreover, the architecture follows the Single Responsibility Principle, making the code easier to maintain and refactor.
+The Onion Architecture enhances testability, maintainability, and flexibility. It allows writing unit tests that depend solely on the Domain layer, unaffected by external frameworks or dependencies. This design also follows the Single Responsibility Principle, simplifying maintenance and refactoring.
 
-### Structure
-Here's my design of how the directory structure might look:
+## Project Structure
+The updated project structure aligns with the principles of Onion Architecture, ensuring a clear separation of concerns and improved maintainability. Here's an overview of the updated directory structure:
 
 ```
 MyCompany.MyProduct.sln
 │
 ├───src
-│   ├───MyCompany.MyProduct.Core
-│   │   ├───Domain
-│   │   │   ├───Entities
-│   │   │   ├───Enums
-│   │   │   ├───Events
-│   │   │   └───ValueObjects
-│   │   ├───Errors
-│   │   ├───Exceptions
-│   │   ├───Primitives
-│   │   ├───Repositories
-│   │   ├───Services
-│   │   ├───Shared
-│   │   └───Specifications
-│   │
-│   ├───MyCompany.MyProduct.Infrastructure
-│   │   ├───Authentication
-│   │   ├───BackgroundJobs
-│   │   ├───Common
-│   │   ├───Emails
-│   │   ├───Identity
-│   │   ├───Messaging
-│   │   ├───Notifications
-│   │   └───Persistence
-│   │       ├───Configurations
-│   │       ├───Constants
-│   │       ├───Extensions
-│   │       ├───Migrations
-│   │       └───Repositories
-│   │
-│   ├───MyCompany.MyProduct.Application
-│   │   ├───Abstractions
-|   |   |   ├───Authentication
-│   │   │   ├───Common
-│   │   │   ├───Data
-│   │   │   ├───Emails
-│   │   │   ├───Messaging
-│   │   │   └───Notifications
-│   │   ├───Behaviors
-│   │   ├───Exceptions
-│   │   ├───Extensions
-│   │   └───UsesCases
-│   │
-│   └───MyCompany.MyProduct.Presentation
-│       ├───Abstractions
-│       ├───Contracts
-│       ├───Controllers
-│       └───Middlewares
-│
-└───tests
-    ├───MyCompany.MyProduct.Core.UnitTests
-    ├───MyCompany.MyProduct.Infrastructure.UnitTests
-    ├───MMyCompany.MyProduct.Application.UnitTests
-    └───MyCompany.MyProduct.Presentation.UnitTests
+│   ├───Solution Items
+│   │   ├───.editorconfig
+│   │   ├───DirectoryBuild.props
+│   │   └───Directory.Packages.props
+│   ├───Core
+│   │   ├───MyCompany.MyProduct.Application
+│   │   │   ├───Abstractions
+│   │   │   │   ├───Authentication
+│   │   │   │   ├───Authorization
+│   │   │   │   ├───Common
+│   │   │   │   ├───Data
+│   │   │   │   ├───Emails
+│   │   │   │   ├───Messaging
+│   │   │   │   └───Notifications
+│   │   │   ├───Behaviors
+│   │   │   ├───Exceptions
+│   │   │   ├───Extensions
+│   │   │   └───Features
+│   │   └───MyCompany.MyProduct.Domain
+│   │       ├───Entities
+│   │       ├───Enums
+│   │       ├───Errors
+│   │       ├───Events
+│   │       ├───Exceptions
+│   │       ├───Primitives
+│   │       ├───Repositories
+│   │       ├───Services
+│   │       ├───Shared
+│   │       ├───Specifications
+│   │       └───ValueObjects
+│   └───External
+│       ├───MyCompany.MyProduct.Api
+│       │   ├───Extensions
+│       │   └───Dockerfile
+│       ├───MyCompany.MyProduct.Infrastructure
+│       │   ├───Authentication
+│       │   ├───Authorization
+│       │   ├───BackgroundJobs
+│       │   ├───Common
+│       │   ├───Emails
+│       │   ├───Messaging
+│       │   └───Notifications
+│       ├───MyCompany.MyProduct.Persistence
+│       │   ├───Configurations
+│       │   ├───Constants
+│       │   ├───Extensions
+│       │   ├───Migrations
+│       │   └───Repositories
+│       └───MyCompany.MyProduct.Presentation
+│           ├───Contracts
+│           ├───Endpoints
+│           └───Routes
+├───tests
+│   └───Core
+│       ├───MyCompany.MyProduct.Application.UnitTests
+│       │   ├───Data
+│       │   └───Features
+│       ├───MyCompany.MyProduct.ArchitectureTests
+│       │   ├───Application
+│       │   └───Domain
+│       └───MyCompany.MyProduct.Domain.UnitTests
+│           ├───Data
+│           └───Features
+└───docker-compose
 ```
 
-In this example, the Core project contains the domain entities and business logic, the Application project contains the use cases and services, the Infrastructure project contains the data access layer, and the Presentation project contains the user interface components. The references between the projects are as follows:
-
-- The Core project has no dependencies.
-- The Application project depends on the Core project.
-- The Infrastructure project depends on the Core project and any third-party libraries necessary for data access.
-- The Presentation project depends on the Application and Core projects.
-
-`Note that this is just one example of how to implement Onion Architecture in .NET, and you may need to adapt it to your specific needs and preferences`.
+This structure ensures that each component of our system is neatly organized, facilitating easier navigation and understanding of the codebase.
 
 ### Conclusion
-In conclusion, Onion Architecture is an excellent software design pattern that can help you build robust and maintainable applications. By separating the application into different layers, it promotes decoupling and testability. We hope that this article has given you a good understanding of Onion Architecture and its implementation in Dotnet. Next time you start a new project, give Onion Architecture a try, and see the difference yourself!
+Onion Architecture offers a robust framework for building maintainable and scalable applications in .NET. By segregating the application into distinct layers, it promotes a clean separation of concerns and enhances the overall software quality. We encourage you to adopt this architecture in your next .NET project for a noticeable improvement in your development process.
 
 ## LICENSE
 This project is licensed under the License (MIT License) - see the [LICENSE](LICENSE) file for details.

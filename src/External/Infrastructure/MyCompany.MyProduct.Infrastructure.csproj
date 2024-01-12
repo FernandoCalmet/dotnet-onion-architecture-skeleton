@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Identity\**" />
+    <EmbeddedResource Remove="Identity\**" />
+    <None Remove="Identity\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Emails\" />
+    <Folder Include="Messaging\" />
+    <Folder Include="Authorization\" />
+    <Folder Include="Notifications\" />
+    <Folder Include="Authentication\" />
+    <Folder Include="BackgroundJobs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Application\MyCompany.MyProduct.Application.csproj" />
+    <ProjectReference Include="..\..\External\Persistence\MyCompany.MyProduct.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -12,15 +12,22 @@
     <Folder Include="Abstractions\Emails\" />
     <Folder Include="Abstractions\Messaging\" />
     <Folder Include="Abstractions\Data\" />
+    <Folder Include="Abstractions\Authorization\" />
     <Folder Include="Abstractions\Notifications\" />
     <Folder Include="Behaviors\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Extensions\" />
-    <Folder Include="UsesCases\" />
+    <Folder Include="Features\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyCompany.MyProduct.Core\MyCompany.MyProduct.Core.csproj" />
+    <ProjectReference Include="..\Domain\MyCompany.MyProduct.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+		<_Parameter1>MyCompany.MyProduct.Application.UnitTests</_Parameter1>
+	</AssemblyAttribute>
   </ItemGroup>
 
 </Project>
