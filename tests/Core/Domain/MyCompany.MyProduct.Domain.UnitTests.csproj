@@ -35,7 +35,7 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="Features\" />
+    <Folder Include="Entities\" />
   </ItemGroup>
 
 </Project>
