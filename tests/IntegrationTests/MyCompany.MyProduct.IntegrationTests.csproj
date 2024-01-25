@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -11,31 +11,27 @@
 
   <ItemGroup>
 	<PackageReference Include="FluentAssertions" />
-	<PackageReference Include="Bogus" />
-	<PackageReference Include="Moq" />
+	<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
 	<PackageReference Include="Microsoft.NET.Test.Sdk" />
+	<PackageReference Include="Testcontainers.Redis" />
 	<PackageReference Include="xunit" />
-	<PackageReference Include="xunit.runner.visualstudio">
+	<PackageReference Include="xunit.runner.visualstudio" >
 		<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		<PrivateAssets>all</PrivateAssets>
 	</PackageReference>
-	<PackageReference Include="coverlet.collector">
+	<PackageReference Include="coverlet.collector" >
 		<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		<PrivateAssets>all</PrivateAssets>
 	</PackageReference>
-	<PackageReference Include="coverlet.msbuild">
-		<PrivateAssets>all</PrivateAssets>
-		<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-	</PackageReference>
-</ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Core\Application\MyCompany.MyProduct.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="Features\" />
+    <Folder Include=".files\" />
+    <Folder Include="Infrastructure\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\External\Api\MyCompany.MyProduct.Api.csproj" />
   </ItemGroup>
 
 </Project>

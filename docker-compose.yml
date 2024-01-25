@@ -3,6 +3,37 @@ version: '3.4'
 services:
   mycompany.myproduct.api:
     image: ${DOCKER_REGISTRY-}mycompanymyproductapi
+    container_name: MyCompany.MyProduct.Api
     build:
       context: .
-      dockerfile: src/External/Api/Dockerfile
+      dockerfile: src/MyCompany.MyProduct.Api/Dockerfile
+    depends_on:
+      - mycompany-myproduct-db
+
+  mycompany-myproduct-db:
+    image: postgres:latest
+    container_name: MyCompanyMyProduct.Db
+    environment:
+      - POSTGRES_DB=mycompany-myproduct
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./.containers/database:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  mycompany-myproduct--seq:
+    image: datalust/seq:latest
+    container_name: MyCompanyMyProduct.Seq
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - 5341:5341
+      - 8081:80
+
+  mycompany-myproduct--redis:
+    image: redis:latest
+    container_name: MyCompanyMyProduct.Redis
+    restart: always
+    ports:
+      - '6379:6379'

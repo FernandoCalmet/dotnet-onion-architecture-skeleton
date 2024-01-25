@@ -1,19 +1,17 @@
-#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
 WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
+EXPOSE 5000
+EXPOSE 5001
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Directory.Packages.props", "."]
 COPY ["Directory.Build.props", "."]
-COPY ["src/External/Api/MyCompany.MyProduct.Api.csproj", "src/External/Api/"]
 COPY ["src/Core/Application/MyCompany.MyProduct.Application.csproj", "src/Core/Application/"]
 COPY ["src/Core/Domain/MyCompany.MyProduct.Domain.csproj", "src/Core/Domain/"]
+COPY ["src/External/Api/MyCompany.MyProduct.Api.csproj", "src/External/Api/"]
 COPY ["src/External/Infrastructure/MyCompany.MyProduct.Infrastructure.csproj", "src/External/Infrastructure/"]
 COPY ["src/External/Persistence/MyCompany.MyProduct.Persistence.csproj", "src/External/Persistence/"]
 RUN dotnet restore "./src/External/Api/./MyCompany.MyProduct.Api.csproj"

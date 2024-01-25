@@ -11,6 +11,7 @@
     <Folder Include="Constants\" />
     <Folder Include="Extensions\" />
     <Folder Include="Migrations\" />
+    <Folder Include="Specifications\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
 

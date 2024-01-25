@@ -84,7 +84,6 @@ MyCompany.MyProduct.sln
 │   │       ├───Repositories
 │   │       ├───Services
 │   │       ├───Shared
-│   │       ├───Specifications
 │   │       └───ValueObjects
 │   └───External
 │       ├───MyCompany.MyProduct.Api
@@ -103,22 +102,29 @@ MyCompany.MyProduct.sln
 │       │   ├───Constants
 │       │   ├───Extensions
 │       │   ├───Migrations
-│       │   └───Repositories
+│       │   ├───Repositories
+│       │   └───Specifications
 │       └───MyCompany.MyProduct.Presentation
 │           ├───Contracts
 │           ├───Endpoints
 │           └───Routes
 ├───tests
-│   └───Core
-│       ├───MyCompany.MyProduct.Application.UnitTests
-│       │   ├───Data
-│       │   └───Features
-│       ├───MyCompany.MyProduct.ArchitectureTests
-│       │   ├───Application
-│       │   └───Domain
-│       └───MyCompany.MyProduct.Domain.UnitTests
-│           ├───Data
-│           └───Entities
+│   ├───MyCompany.MyProduct.Api.FunctionalTests
+│   │   ├───.files
+│   │   └───Infrastructure
+│   ├───MyCompany.MyProduct.Application.UnitTests
+│   ├───MyCompany.MyProduct.ArchitectureTests
+│   │   ├───Application
+│   │   ├───Domain
+│   │   ├───Infrastructure
+│   │   ├───Persistence
+│   │   ├───Presentation
+│   │   └───Layers
+│   ├───MyCompany.MyProduct.Domain.UnitTests
+│   │   └───Infrastructure
+│   └───MyCompany.MyProduct.IntegrationTests
+│       ├───.files
+│       └───Infrastructure
 └───docker-compose
 ```
 

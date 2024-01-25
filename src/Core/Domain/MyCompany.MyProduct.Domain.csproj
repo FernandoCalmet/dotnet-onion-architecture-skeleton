@@ -1,10 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="MediatR.Contracts" />
+  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -17,7 +21,6 @@
     <Folder Include="Exceptions\" />
     <Folder Include="Primitives\" />
     <Folder Include="Shared\" />
-    <Folder Include="Specifications\" />
   </ItemGroup>
 
 </Project>

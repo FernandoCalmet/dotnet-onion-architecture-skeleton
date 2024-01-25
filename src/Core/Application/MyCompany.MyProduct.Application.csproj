@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+	<PackageReference Include="Dapper" />
+	<PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+	<PackageReference Include="MediatR" />
+	<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+	<PackageReference Include="Serilog" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Abstractions\Authentication\" />
     <Folder Include="Abstractions\Common\" />
     <Folder Include="Abstractions\Emails\" />
@@ -25,9 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-	<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
-		<_Parameter1>MyCompany.MyProduct.Application.UnitTests</_Parameter1>
-	</AssemblyAttribute>
+    <InternalsVisibleTo Include="MyCompany.MyProduct.Application.UnitTests" />
   </ItemGroup>
 
 </Project>
