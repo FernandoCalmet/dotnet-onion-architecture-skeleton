@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+	<PackageReference Include="EFCore.NamingConventions" />
+	<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+	<PackageReference Include="Newtonsoft.Json" />
+	<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+	<PackageReference Include="Quartz.Extensions.Hosting" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Configurations\" />
     <Folder Include="Constants\" />
     <Folder Include="Extensions\" />
