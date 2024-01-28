@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+	<PackageReference Include="Asp.Versioning.Mvc" />
+	<PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" />
+	<PackageReference Include="AspNetCore.HealthChecks.NpgSql" />
+	<PackageReference Include="AspNetCore.HealthChecks.Redis" />
+	<PackageReference Include="AspNetCore.HealthChecks.Uris" />
+	<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+	<PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" />
+	<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Common\" />
     <Folder Include="Emails\" />
     <Folder Include="Messaging\" />
