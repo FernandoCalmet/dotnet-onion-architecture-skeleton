@@ -7,17 +7,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Abstractions\Common\**" />
+    <EmbeddedResource Remove="Abstractions\Common\**" />
+    <None Remove="Abstractions\Common\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Abstractions\Authentication\" />
-    <Folder Include="Abstractions\Common\" />
     <Folder Include="Abstractions\Emails\" />
     <Folder Include="Abstractions\Messaging\" />
     <Folder Include="Abstractions\Data\" />
     <Folder Include="Abstractions\Authorization\" />
+    <Folder Include="Abstractions\EventBus\" />
+    <Folder Include="Abstractions\Clock\" />
+    <Folder Include="Abstractions\Caching\" />
     <Folder Include="Abstractions\Notifications\" />
     <Folder Include="Behaviors\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Extensions\" />
     <Folder Include="Features\" />
+    <Folder Include="Notifications\" />
   </ItemGroup>
 
   <ItemGroup>

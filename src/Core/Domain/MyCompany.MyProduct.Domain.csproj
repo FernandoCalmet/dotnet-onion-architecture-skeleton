@@ -10,6 +10,8 @@
     <Folder Include="Entities\" />
     <Folder Include="Enums\" />
     <Folder Include="Events\" />
+    <Folder Include="Abstractions\" />
+    <Folder Include="Time\" />
     <Folder Include="ValueObjects\" />
     <Folder Include="Repositories\" />
     <Folder Include="Services\" />

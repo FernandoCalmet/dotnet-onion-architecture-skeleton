@@ -65,16 +65,19 @@ MyCompany.MyProduct.sln
 │   │   │   ├───Abstractions
 │   │   │   │   ├───Authentication
 │   │   │   │   ├───Authorization
-│   │   │   │   ├───Common
+│   │   │   │   ├───Caching
+│   │   │   │   ├───Clock
 │   │   │   │   ├───Data
 │   │   │   │   ├───Emails
-│   │   │   │   ├───Messaging
-│   │   │   │   └───Notifications
+│   │   │   │   ├───EventBus
+│   │   │   │   └───Messaging
 │   │   │   ├───Behaviors
 │   │   │   ├───Exceptions
 │   │   │   ├───Extensions
-│   │   │   └───Features
+│   │   │   ├───Features
+│   │   │   └───Notifications
 │   │   └───MyCompany.MyProduct.Domain
+│   │       ├───Abstractions
 │   │       ├───Entities
 │   │       ├───Enums
 │   │       ├───Errors
@@ -84,6 +87,7 @@ MyCompany.MyProduct.sln
 │   │       ├───Repositories
 │   │       ├───Services
 │   │       ├───Shared
+│   │       ├───Time
 │   │       └───ValueObjects
 │   └───External
 │       ├───MyCompany.MyProduct.Api
@@ -93,13 +97,18 @@ MyCompany.MyProduct.sln
 │       │   ├───Authentication
 │       │   ├───Authorization
 │       │   ├───BackgroundJobs
-│       │   ├───Common
+│       │   ├───Caching
+│       │   ├───Clock
 │       │   ├───Emails
-│       │   ├───Messaging
+│       │   ├───EventBus
+│       │   ├───Extensions
+│       │   ├───Logging
 │       │   └───Notifications
 │       ├───MyCompany.MyProduct.Persistence
 │       │   ├───Configurations
 │       │   ├───Constants
+│       │   ├───Data
+│       │   ├───Interceptors
 │       │   ├───Extensions
 │       │   ├───Migrations
 │       │   ├───Repositories
