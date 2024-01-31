@@ -15,9 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCompany.MyProduct.Present
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{BA5A0443-8E80-4BF5-8B97-4E3508865D27}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCompany.MyProduct.Domain.UnitTests", "tests\DomainUnitTests\MyCompany.MyProduct.Domain.UnitTests.csproj", "{7D48B563-000C-48EB-87A7-CB002211CF75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCompany.MyProduct.Domain.UnitTests", "tests\Domain.UnitTests\MyCompany.MyProduct.Domain.UnitTests.csproj", "{7D48B563-000C-48EB-87A7-CB002211CF75}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCompany.MyProduct.Application.UnitTests", "tests\ApplicationUnitTests\MyCompany.MyProduct.Application.UnitTests.csproj", "{68B505EB-34EE-46B8-8E93-0D61E52A94EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCompany.MyProduct.Application.UnitTests", "tests\Application.UnitTests\MyCompany.MyProduct.Application.UnitTests.csproj", "{68B505EB-34EE-46B8-8E93-0D61E52A94EC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BC2D97B6-DEAA-469B-BFAA-F8F112018D04}"
 	ProjectSection(SolutionItems) = preProject
@@ -36,11 +36,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCompany.MyProduct.Persist
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E502AB04-72CF-4368-BB12-CBBD9810BC66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompany.MyProduct.Api.FunctionalTests", "tests\ApiFunctionalTests\MyCompany.MyProduct.Api.FunctionalTests.csproj", "{E3CCDE63-47FA-420C-A639-B0DA4A97ECBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCompany.MyProduct.Api.FunctionalTests", "tests\Api.FunctionalTests\MyCompany.MyProduct.Api.FunctionalTests.csproj", "{E3CCDE63-47FA-420C-A639-B0DA4A97ECBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompany.MyProduct.IntegrationTests", "tests\IntegrationTests\MyCompany.MyProduct.IntegrationTests.csproj", "{5B026952-DC81-4DF2-A8DA-F60B5592D9F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCompany.MyProduct.Application.IntegrationTests", "tests\Application.IntegrationTests\MyCompany.MyProduct.Application.IntegrationTests.csproj", "{5B026952-DC81-4DF2-A8DA-F60B5592D9F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompany.MyProduct.ArchitectureTests", "tests\ArchitectureTests\MyCompany.MyProduct.ArchitectureTests.csproj", "{E50C5CA7-00C2-4028-876F-C696D7E47009}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCompany.MyProduct.ArchitectureTests", "tests\ArchitectureTests\MyCompany.MyProduct.ArchitectureTests.csproj", "{E50C5CA7-00C2-4028-876F-C696D7E47009}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

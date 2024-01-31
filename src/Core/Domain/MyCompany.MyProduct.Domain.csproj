@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-	<PackageReference Include="MediatR.Contracts" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="Enums\" />
     <Folder Include="Events\" />

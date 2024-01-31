@@ -7,11 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-	<PackageReference Include="EFCore.NamingConventions" />
-	<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
-	<PackageReference Include="Newtonsoft.Json" />
 	<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
-	<PackageReference Include="Quartz.Extensions.Hosting" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,7 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
-	<ProjectReference Include="..\..\Core\Application\MyCompany.MyProduct.Application.csproj" />
+	<InternalsVisibleTo Include="MyCompany.MyProduct.Application.IntegrationTests" />
+	<InternalsVisibleTo Include="MyCompany.MyProduct.Api.FunctionalTests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\MyCompany.MyProduct.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

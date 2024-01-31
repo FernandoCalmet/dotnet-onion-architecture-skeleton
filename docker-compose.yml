@@ -21,19 +21,3 @@ services:
       - ./.containers/database:/var/lib/postgresql/data
     ports:
       - 5432:5432
-
-  mycompany-myproduct--seq:
-    image: datalust/seq:latest
-    container_name: MyCompanyMyProduct.Seq
-    environment:
-      - ACCEPT_EULA=Y
-    ports:
-      - 5341:5341
-      - 8081:80
-
-  mycompany-myproduct--redis:
-    image: redis:latest
-    container_name: MyCompanyMyProduct.Redis
-    restart: always
-    ports:
-      - '6379:6379'
