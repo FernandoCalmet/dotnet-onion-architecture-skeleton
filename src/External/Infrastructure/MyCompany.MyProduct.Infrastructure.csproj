@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Application\MyCompany.MyProduct.Application.csproj" />
+    <ProjectReference Include="..\Persistence\MyCompany.MyProduct.Persistence.csproj" />
     <ProjectReference Include="..\Presentation\MyCompany.MyProduct.Presentation.csproj" />
   </ItemGroup>
 
