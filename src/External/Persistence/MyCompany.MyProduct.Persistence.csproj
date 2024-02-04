@@ -6,17 +6,27 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <!--#if (UsePostgres) -->
   <ItemGroup>
 	<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+	<PackageReference Include="EFCore.NamingConventions" />
   </ItemGroup>
+  <!--#endif -->
+
+  <!--#if (UseSqlServer) -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+  </ItemGroup>
+  <!--#endif -->
 
   <ItemGroup>
     <Folder Include="Configurations\" />
     <Folder Include="Constants\" />
-    <Folder Include="Extensions\" />
-    <Folder Include="Migrations\" />
     <Folder Include="Data\" />
+    <Folder Include="Extensions\" />
     <Folder Include="Interceptors\" />
+    <Folder Include="Migrations\Postgres\" />
+    <Folder Include="Migrations\SqlServer\" />
     <Folder Include="Specifications\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
@@ -27,7 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
-	  <ProjectReference Include="..\..\Core\Application\MyCompany.MyProduct.Application.csproj" />
+	<ProjectReference Include="..\..\Core\Application\MyCompany.MyProduct.Application.csproj" />
   </ItemGroup>
 
 </Project>

@@ -9,6 +9,8 @@
 	<ItemGroup>
 		<Folder Include="Contracts\" />
 		<Folder Include="Endpoints\" />
+		<Folder Include="Extensions\" />
+		<Folder Include="Authorization\" />
 		<Folder Include="Routes\" />
 	</ItemGroup>
 

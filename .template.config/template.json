@@ -1,0 +1,74 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Fernando Calmet",
+    "classifications": [
+      "web",
+      "api",
+      "aspnet"
+    ],
+    "identity": "OnionArchitectureSkeleton.Template",
+    "name": "Onion Architecture Skeleton Template",
+    "shortName": "onion-architecture-skeleton",
+    "tags": {
+      "language": "C#",
+      "type": "solution"
+    },
+    "sourceName": "OnionArchitectureSkeleton",
+    "description": "This is a onion architecture skeleton template",
+    "symbols": {
+      "UseSwagger": {
+        "type": "parameter",
+        "description": "Use Swagger?",
+        "defaultValue": "true",
+        "datatype": "bool"
+      },
+      "DatabaseProvider": {
+        "type": "parameter",
+        "description": "Select the database provider (sqlserver or postgres)",
+        "choices": [
+          {
+            "choice": "sqlserver",
+            "displayName": "SQL Server",
+            "description": "Use SQL Server with Entity Framework"
+          },
+          {
+            "choice": "postgres",
+            "displayName": "PostgreSql",
+            "description": "Use Postgres with Entity Framework"
+          }
+        ]
+      },
+      "UseSqlServer": {
+        "type": "computed",
+        "value": "(DatabaseProvider == \"sqlserver\")"
+      },
+      "UsePostgres": {
+        "type": "computed",
+        "value": "(DatabaseProvider == \"postgres\")"
+      }
+    },
+    "sources": [
+      {
+        "modifiers": [
+          {
+            "condition": "(UseSwagger)",
+            "exclude": [
+                "**/OpenApi/**/*"
+            ]
+          },
+          {
+            "condition": "(UseSqlServer)",
+            "exclude": [
+              "**/Migrations/SqlServer/**/*"
+            ]
+          },
+          {
+            "condition": "(UsePostgres)",
+            "exclude": [
+              "**/Migrations/Postgres/**/*"
+            ]
+          }
+        ]
+      }
+    ]
+  }

@@ -8,7 +8,8 @@
 ## CONTENT
 
 * 🔥 [Description](#description)
-* ⚙️ [Install](#install)
+* ⚙️ [Installation](#installation)
+* 🍵 [Usage](#usage)
 * 📓 [Summary](#summary)
 * 🏗️ [Project Structure](#project-structure)
 * 📄 [License](#license)
@@ -18,13 +19,58 @@
 
 This project is a .NET template skeleton built on the Onion Architecture, providing a solid foundation for scalable, maintainable, and robust application development.
 
-## INSTALL
+## INSTALLATION
 
-Clone this repository using:
+### Clone project
+
+📌 You can Clone this repository using:
 
 ```bash
-gh repo clone FernandoCalmet/dotnet-onion-architecture-skeleton
+git clone https://github.com/FernandoCalmet/dotnet-onion-architecture-skeleton.git
 ```
+
+### Setup dotnet template
+
+📌 To install this ``dotnet template``, navigate to the root directory of this repository and run the following command:
+
+```bash
+dotnet new install .
+```
+
+### Data migration
+
+📌 To migrate your data with ``Entity Framework Core`` you can run the following commands using the Package Manager Console:
+
+Command | Description
+--- | ---
+add-migration ``[name]`` --startup-project MyCompany.MyProduct.Api --project MyCompany.MyProduct.Persistence --context ApplicationDbContext | Create a new migration with the specific migration name
+remove-migration | Remove the latest migration.
+update-database | Update the database to the latest migration.
+update-database ``[name]`` | Update the database to a specific migration name point.
+get-migrations | Lists all available migrations.
+script-migration | Generates a SQL script for all migrations.
+drop-database | Drop the database.
+
+## USAGE
+
+To create a new project using this template, use the dotnet new command followed by the template name. You can specify additional parameters to customize the generated project.
+
+```bash
+dotnet new onion-architecture-skeleton --MyCompanyMyProduct true --DatabaseProvider postgres
+```
+
+### Parameters
+
+The following parameters are available for this template:
+
+Parameter | Short Option | Description
+--- | --- | ---
+--UseSwagger | -U | Includes Swagger UI in the generated project.
+--DatabaseProvider | -D | Specifies the database provider to use. Supported values are sqlserver and postgresql.
+
+### Conditional Code and Files
+
+This template uses conditional syntax to include or exclude certain parts of the code based on the parameters you provide. For example, if you specify -D postgresql, the generated project will include a PostgresSql specific repository implementation, and exclude the other database provider files.
 
 ## SUMMARY
 
@@ -69,20 +115,17 @@ MyCompany.MyProduct.sln
 │   │   │   │   ├───Clock
 │   │   │   │   ├───Data
 │   │   │   │   ├───Emails
-│   │   │   │   ├───EventBus
 │   │   │   │   └───Messaging
 │   │   │   ├───Behaviors
 │   │   │   ├───Exceptions
 │   │   │   ├───Extensions
-│   │   │   ├───Features
-│   │   │   └───Notifications
+│   │   │   └───Features
 │   │   └───MyCompany.MyProduct.Domain
 │   │       ├───Abstractions
 │   │       ├───Entities
 │   │       ├───Enums
 │   │       ├───Errors
 │   │       ├───Events
-│   │       ├───Exceptions
 │   │       ├───Primitives
 │   │       ├───Repositories
 │   │       ├───Services
@@ -92,6 +135,8 @@ MyCompany.MyProduct.sln
 │   └───External
 │       ├───MyCompany.MyProduct.Api
 │       │   ├───Extensions
+│       │   ├───Middleware
+│       │   ├───OpenApi
 │       │   └───Dockerfile
 │       ├───MyCompany.MyProduct.Infrastructure
 │       │   ├───Authentication
@@ -114,8 +159,10 @@ MyCompany.MyProduct.sln
 │       │   ├───Repositories
 │       │   └───Specifications
 │       └───MyCompany.MyProduct.Presentation
+│           ├───Authorization
 │           ├───Contracts
 │           ├───Endpoints
+│           ├───Extensions
 │           └───Routes
 ├───tests
 │   ├───MyCompany.MyProduct.Api.FunctionalTests

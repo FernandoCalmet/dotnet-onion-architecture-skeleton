@@ -14,9 +14,7 @@
     <Folder Include="Time\" />
     <Folder Include="ValueObjects\" />
     <Folder Include="Repositories\" />
-    <Folder Include="Services\" />
     <Folder Include="Errors\" />
-    <Folder Include="Exceptions\" />
     <Folder Include="Primitives\" />
     <Folder Include="Shared\" />
   </ItemGroup>
